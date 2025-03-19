@@ -10,7 +10,7 @@ import requests
 # Configuração do auto-update
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/refs/heads/main/version.txt"
 CHANGELOG_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/main/changelog.txt"
-VERSAO_ATUAL = "1.0.4"
+VERSAO_ATUAL = "1.0.5"
 
 # Lista de vídeos a serem baixados
 video_list = []
