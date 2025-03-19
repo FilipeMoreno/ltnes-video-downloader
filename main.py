@@ -9,9 +9,9 @@ import requests
 
 # Configuração do auto-update
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/refs/heads/main/version.txt"
-UPDATE_URL = "https://github.com/FilipeMoreno/ltnes-video-downloader/releases/latest"
+UPDATE_URL = "https://github.com/FilipeMoreno/ltnes-video-downloader/releases/download/Dev/LTNES.Video.Downloader.1.0.2.exe"
 CHANGELOG_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/main/changelog.txt"
-VERSAO_ATUAL = "1.0.1"
+VERSAO_ATUAL = "1.0.2"
 
 # Lista de vídeos a serem baixados
 video_list = []
@@ -23,9 +23,6 @@ def verificar_atualizacao():
         response = requests.get(GITHUB_VERSION_URL, timeout=5)
         response.raise_for_status()
         versao_remota = response.text.strip()
-    except requests.exceptions.RequestException as e:
-        print(f"Erro de conexão: {e}")
-        return
 
         if versao_remota > VERSAO_ATUAL:
             resposta = messagebox.askyesno("Atualização Disponível", f"Nova versão {versao_remota} disponível!\nDeseja atualizar agora?")
