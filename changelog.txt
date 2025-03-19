@@ -1,2 +1,4 @@
+1.0.1 (19/03/2025)
+- Teste de atualização
 1.0.0 (19/03/2025)
 - Versão lançada
