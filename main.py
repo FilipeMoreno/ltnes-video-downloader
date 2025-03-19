@@ -11,7 +11,7 @@ import requests
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/refs/heads/main/version.txt"
 UPDATE_URL = "https://github.com/FilipeMoreno/ltnes-video-downloader/releases/latest"
 CHANGELOG_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/main/changelog.txt"
-VERSAO_ATUAL = "1.0.0"
+VERSAO_ATUAL = "1.0.1"
 
 # Lista de vídeos a serem baixados
 video_list = []
