@@ -1,3 +1,6 @@
+1.0.4 (19/03/2025)
+- Correção no auto-update
+- Agora o auto-update deve funcionar corretamente
 1.0.3 (19/03/2025)
 - Pequenas correções
 1.0.2 (19/03/2025)

@@ -9,9 +9,8 @@ import requests
 
 # Configuração do auto-update
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/refs/heads/main/version.txt"
-UPDATE_URL = "https://github.com/FilipeMoreno/ltnes-video-downloader/releases/download/1.0.3/LTNES.Video.Downloader.1.0.3.exe"
 CHANGELOG_URL = "https://raw.githubusercontent.com/FilipeMoreno/ltnes-video-downloader/main/changelog.txt"
-VERSAO_ATUAL = "1.0.3"
+VERSAO_ATUAL = "1.0.4"
 
 # Lista de vídeos a serem baixados
 video_list = []
@@ -27,15 +26,16 @@ def verificar_atualizacao():
         if versao_remota > VERSAO_ATUAL:
             resposta = messagebox.askyesno("Atualização Disponível", f"Nova versão {versao_remota} disponível!\nDeseja atualizar agora?")
             if resposta:
-                baixar_e_instalar_atualizacao()
+                baixar_e_instalar_atualizacao(versao_remota)
     except Exception as e:
         print(f"Erro ao verificar atualização: {e}")
         
 
-def baixar_e_instalar_atualizacao():
+def baixar_e_instalar_atualizacao(versao):
     try:
         messagebox.showinfo("Baixando", "Baixando a nova versão...")
         novo_arquivo = "update_installer.exe"
+        UPDATE_URL = "https://github.com/FilipeMoreno/ltnes-video-downloader/releases/download/" + versao + "/LTNES.Video.Downloader.exe"
         comando = ["curl", "-L", f"{UPDATE_URL}", "-o", novo_arquivo]
         subprocess.run(comando, check=True)
 
